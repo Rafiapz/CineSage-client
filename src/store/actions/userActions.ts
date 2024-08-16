@@ -3,7 +3,7 @@ import apiClient from "../../utils/axios";
 import { jsonConfig } from "../../utils/apiUtils";
 
 
-export const loginAction: AsyncThunk<any, any, any> = createAsyncThunk("user/login", async (form: any, { rejectWithValue }) => {
+export const loginAction: AsyncThunk<any, any, any> = createAsyncThunk("user/login", async (form: any) => {
     try {
         const response = await apiClient.post('/user/login', form, jsonConfig);
 
