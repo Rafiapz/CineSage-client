@@ -13,7 +13,7 @@ const Home: FC = () => {
    const fetchMovies = () => {
       apiClient
          .get("/movies/fetch-movies")
-         .then(() => {
+         .then((res) => {
             setServerIsDown(false);
          })
          .catch((err) => {
@@ -28,7 +28,10 @@ const Home: FC = () => {
                <h1 className="text-3xl font-bold text-gray-600 tracking-wide">Now Playing</h1>
             </div>
          )}
+
          {!serverIsDown ? <Cards /> : <ServerDown />}
+         {/* <Cards />
+         <ServerDown /> */}
       </div>
    );
 };

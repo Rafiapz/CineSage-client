@@ -13,6 +13,7 @@ import AddMovie from "./components/addMovie/AddMovie";
 
 function App() {
    const auth = useSelector((state: RootState) => state?.user?.auth?.status);
+   const role = useSelector((state: RootState) => state?.user?.auth?.role);
 
    const dispatch = useDispatch<AppDispatch>();
 

@@ -35,7 +35,7 @@ const userSlice = createSlice({
                 state.auth.role = action.payload?.data.role
                 state.auth.status = true
             })
-            .addCase(signOutAction.fulfilled, (state) => {
+            .addCase(signOutAction.fulfilled, (state, action) => {
                 state.auth.status = false
                 state.auth.role = null
                 state.auth.data = null

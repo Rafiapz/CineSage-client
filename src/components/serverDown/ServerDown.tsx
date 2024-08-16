@@ -1,3 +1,5 @@
+import React from "react";
+
 const ServerDown = () => {
    return (
       <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-purple-600 to-blue-500">
