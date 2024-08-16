@@ -13,7 +13,7 @@ const Home: FC = () => {
    const fetchMovies = () => {
       apiClient
          .get("/movies/fetch-movies")
-         .then((res) => {
+         .then(() => {
             setServerIsDown(false);
          })
          .catch((err) => {
