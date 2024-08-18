@@ -1,15 +1,7 @@
-import { FC, useEffect } from "react";
-import apiClient from "../../utils/axios";
+import { FC } from "react";
 import Cards from "../../components/card/Cards";
 
 const Home: FC = () => {
-   useEffect(() => {
-      fetchMovies();
-   });
-
-   const fetchMovies = () => {
-      apiClient.get("/movies/fetch-movies").finally(() => {});
-   };
    return (
       <>
          <div className="mt-8">
